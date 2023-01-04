@@ -1,4 +1,23 @@
-# GarmentsUi
+# WardrobeUI 
+
+Made using Angular
+
+## Description
+
+Add any garment that you want, edit it or delete it.
+
+## Getting Started
+
+You have a few choices when entering a garment in the API :
+- The name 
+- The color
+- The description
+- The material
+
+### Installing
+
+Copy the project and launch it on your machine by following the instructions down below.
+You'll also need to have the WardrobeAPI on your machine <https://github.com/Naime-m/WardrobeAPI>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
