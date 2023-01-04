@@ -27,4 +27,8 @@ export class GarmentService {
   onPostGarment(garment: Garment): Observable<Garment> {
     return this.http.post<Garment>(this.apiUrl, garment);
   }
+
+  onDeleteGarment(id: any): Observable<Garment> {
+    return this.http.delete<Garment>(this.apiUrl +  '?id=' + id);
+  }
 }
