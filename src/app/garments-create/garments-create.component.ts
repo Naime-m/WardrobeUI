@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { GarmentService } from '../services/garment.service';
 
 @Component({
@@ -10,12 +11,13 @@ export class GarmentsCreateComponent {
 
   garment: any = {};
 
- constructor(private garmentService: GarmentService) {}
+ constructor(private garmentService: GarmentService,
+  private router: Router) {}
 
  createGarment() {
   this.garmentService.onPostGarment(this.garment).subscribe(
     response => {
-      console.log(response);
+      this.router.navigate(['/index']);
     }
   )
  } 
