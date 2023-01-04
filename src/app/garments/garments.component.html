@@ -6,6 +6,6 @@
     <p>{{garment.color}}</p>
     <p>{{garment.material}}</p>
     <p>{{garment.description}}</p>
-<span class="editGarment" routerLink="/edit/{{garment.id}}">Edit</span>
-<span class="deleteGarment">Delete</span>
+<button class="editGarment" routerLink="/edit/{{garment.id}}">Edit</button>
+<button class="deleteGarment" (click)="deleteGarment(garment.id)">Delete</button>
 </div>

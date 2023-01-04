@@ -24,4 +24,14 @@ getAllGarments() {
     }
   )
 }
+
+deleteGarment(id: any) {
+  if(window.confirm('Are you sure you want to delete this?')) {
+    this.garmentService.onDeleteGarment(id).subscribe(
+      response => {
+        this.getAllGarments();
+      }
+    )
+  }
+}
 }
