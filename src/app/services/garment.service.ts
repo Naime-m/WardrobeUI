@@ -12,7 +12,7 @@ export class GarmentService {
 
   apiUrl = 'https://localhost:7056/api/';
 
-  getAllGarments(): Observable<Garment[]> {
+  onGetAllGarments(): Observable<Garment[]> {
     return this.http.get<Garment[]>(this.apiUrl);
   }
 }
