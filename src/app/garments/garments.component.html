@@ -1,4 +1,8 @@
 <div *ngFor="let garment of garments">
     <h1>{{garment.name}}</h1>
+    <p>{{garment.id}}</p>
+    <p>{{garment.color}}</p>
+    <p>{{garment.material}}</p>
+    <p>{{garment.description}}</p>
 <span class="editGarment" routerLink="/edit/{{garment.id}}">Edit</span>
 </div>

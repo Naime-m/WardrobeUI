@@ -14,15 +14,28 @@ export class GarmentsEditComponent implements OnInit {
 
   constructor(
     private garmentService: GarmentService,
-    private actRoute: ActivatedRoute) {}
+    private actRoute: ActivatedRoute,
+    private router: Router) {}
 
   id = this.actRoute.snapshot.params['id'];
 
- ngOnInit(): void {
-  this.garmentService.onGetGarment(this.id).subscribe(
-    response => {
-      this.garment = response;
+  ngOnInit(): void {
+    this.loadGarment();
+  }
+
+  loadGarment() {
+    this.garmentService.onGetGarment(this.id).subscribe(
+      response => {
+        this.garment = response;
+      }) 
     }
-  )
- }
+
+  updateGarment() {
+    this.garmentService.onPutGarment(this.garment).subscribe(
+      response => {
+        this.router.navigate(['/index']);
+      }
+    )
+  }
+
 }

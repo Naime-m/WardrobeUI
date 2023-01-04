@@ -1,6 +1,19 @@
 <div>
     <form>
         <div>
+            <input type="text" name="garmentName" [(ngModel)]="garment.name" placeholder="name">
         </div>
+        <div>
+            <input type="text" name="garmentColor" [(ngModel)]="garment.color" placeholder="color">
+        </div>
+        <div>
+            <input type="text" name="garmentDescription" [(ngModel)]="garment.description" placeholder="description">
+        </div>
+        <div>
+            <input type="text" name="garmentMaterial" [(ngModel)]="garment.material" placeholder="material">
+        </div>
+        <button type="submit" (click)="updateGarment()">Edit</button>
     </form>
 </div>
+
+<a routerLink="/index">Back to home</a>
