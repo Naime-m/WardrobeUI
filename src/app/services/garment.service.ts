@@ -15,4 +15,8 @@ export class GarmentService {
   onGetAllGarments(): Observable<Garment[]> {
     return this.http.get<Garment[]>(this.apiUrl);
   }
+
+  onGetGarment(id: number): Observable<Garment> {
+    return this.http.get<Garment>(this.apiUrl + id);
+  }
 }
