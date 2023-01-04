@@ -16,7 +16,11 @@ export class GarmentService {
     return this.http.get<Garment[]>(this.apiUrl);
   }
 
-  onGetGarment(id: number): Observable<Garment> {
+  onGetGarment(id: any): Observable<Garment> {
     return this.http.get<Garment>(this.apiUrl + id);
+  }
+
+  onPutGarment(garment: Garment): Observable<Garment> {
+    return this.http.put<Garment>(this.apiUrl + '?id=' + garment.id, garment);
   }
 }
