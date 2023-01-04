@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GarmentService } from '../services/garment.service';
 
 @Component({
   selector: 'app-garments-create',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class GarmentsCreateComponent {
 
+  garment: any = {};
+
+ constructor(private garmentService: GarmentService) {}
+
+ createGarment() {
+  this.garmentService.onPostGarment(this.garment).subscribe(
+    response => {
+      console.log(response);
+    }
+  )
+ } 
 }

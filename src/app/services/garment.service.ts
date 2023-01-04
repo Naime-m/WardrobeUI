@@ -23,4 +23,8 @@ export class GarmentService {
   onPutGarment(garment: Garment): Observable<Garment> {
     return this.http.put<Garment>(this.apiUrl + '?id=' + garment.id, garment);
   }
+
+  onPostGarment(garment: Garment): Observable<Garment> {
+    return this.http.post<Garment>(this.apiUrl, garment);
+  }
 }
