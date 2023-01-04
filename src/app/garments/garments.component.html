@@ -1,11 +1,10 @@
-<a routerLink="/create">Add new garment !</a>
-
-<div *ngFor="let garment of garments">
-    <h1>{{garment.name}}</h1>
-    <p>{{garment.id}}</p>
-    <p>{{garment.color}}</p>
-    <p>{{garment.material}}</p>
-    <p>{{garment.description}}</p>
-<button class="editGarment" routerLink="/edit/{{garment.id}}">Edit</button>
-<button class="deleteGarment" (click)="deleteGarment(garment.id)">Delete</button>
+<div class="mt-5 flex gap-x-10 ml-5">
+    <div *ngFor="let garment of garments" class="border-2 rounded-md p-3 px-5">
+        <h1 class="border-1 border-cyan-100 text-lg">Name: <span class="font-bold">{{garment.name}}</span></h1>
+        <p class="text-lg">Color: {{garment.color}}</p>
+        <p class="text-lg">Material: {{garment.material}}</p>
+        <p class="text-lg mb-2">About: {{garment.description}}</p>
+        <button class="border-2 p-2 mr-2 rounded-md" routerLink="/edit/{{garment.id}}">Edit</button>
+        <button class="border-2 p-2 rounded-md" (click)="deleteGarment(garment.id)">Delete</button>
+    </div>
 </div>

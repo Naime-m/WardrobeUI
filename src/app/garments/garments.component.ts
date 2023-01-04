@@ -14,7 +14,7 @@ export class GarmentsComponent implements OnInit {
   }
 
   garments: Garment[] = [];
-
+  title = "My Wardrobe";
 constructor(private garmentService: GarmentService) {}
 
 getAllGarments() {

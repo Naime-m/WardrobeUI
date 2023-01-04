@@ -1,17 +1,20 @@
 <div>
+    <h1 class="text-lg mt-5 ml-5">Add new garment</h1>
     <form>
         <div>
-            <input type="text" name="garmentName" [(ngModel)]="garment.name" placeholder="name">
+            <input type="text" name="garmentName" class="m-3 border-2 p-1 w-1/3" [(ngModel)]="garment.name" placeholder="Name">
         </div>
         <div>
-            <input type="text" name="garmentColor" [(ngModel)]="garment.color" placeholder="color">
+            <input type="text" name="garmentColor" class="m-3 border-2 p-1 w-1/3" [(ngModel)]="garment.color" placeholder="Color">
         </div>
         <div>
-            <input type="text" name="garmentDescription" [(ngModel)]="garment.description" placeholder="description">
+            <input type="text" name="garmentDescription" class="m-3 border-2 p-1 w-1/3" [(ngModel)]="garment.description" placeholder="Description">
         </div>
         <div>
-            <input type="text" name="garmentMaterial" [(ngModel)]="garment.material" placeholder="material">
+            <input type="text" name="garmentMaterial" class="m-3 border-2 p-1 w-1/3" [(ngModel)]="garment.material" placeholder="Material">
         </div>
-        <button type="submit" (click)="createGarment()">Add</button>
+        <button type="submit" class="border-2 p-2 text-center ml-3 mb-7 text-cyan-500 font-bold rounded-md w-40" (click)="createGarment()">Add</button>
     </form>
 </div>
+
+<a routerLink="/index" class="text-lg p-5 underline">Back to home</a>

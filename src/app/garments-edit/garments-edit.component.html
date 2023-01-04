@@ -1,19 +1,20 @@
 <div>
-    <form>
+    <h1 class="text-lg mt-5 ml-5">Edit garment</h1>
+    <form class="p-1 flex flex-col">
         <div>
-            <input type="text" name="garmentName" [(ngModel)]="garment.name" placeholder="name">
+            <input type="text" class="m-3 border-2 p-1 w-1/3" name="garmentName" [(ngModel)]="garment.name" placeholder="Name">
         </div>
         <div>
-            <input type="text" name="garmentColor" [(ngModel)]="garment.color" placeholder="color">
+            <input type="text" class="m-3 border-2 p-1 w-1/3" name="garmentColor" [(ngModel)]="garment.color" placeholder="Color">
         </div>
         <div>
-            <input type="text" name="garmentDescription" [(ngModel)]="garment.description" placeholder="description">
+            <input type="text" class="m-3 border-2 p-1 w-1/3" name="garmentDescription" [(ngModel)]="garment.description" placeholder="Description">
         </div>
         <div>
-            <input type="text" name="garmentMaterial" [(ngModel)]="garment.material" placeholder="material">
+            <input type="text" class="m-3 border-2 p-1 w-1/3" name="garmentMaterial" [(ngModel)]="garment.material" placeholder="Material">
         </div>
-        <button type="submit" (click)="updateGarment()">Edit</button>
+        <button type="submit" class="border-2 p-2 text-center ml-3 mb-7 text-cyan-500 font-bold rounded-md w-40" (click)="updateGarment()">Edit</button>
     </form>
 </div>
 
-<a routerLink="/index">Back to home</a>
+<a routerLink="/index" class="text-lg p-5 underline">Back to home</a>
